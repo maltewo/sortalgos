@@ -7,27 +7,37 @@
  */
 public class bubblesort_class
 {
-    // instance variables - replace the example below with your own
-    private int x;
+    int zahl[] = {42, 56, 24, 1, 74, 7, 8, 27, 96, 12};
 
-    /**
-     * Constructor for objects of class bubblesort_class
-     */
+    
     public bubblesort_class()
     {
         // initialise instance variables
-        x = 0;
+        ausgabe();
+        sortieren();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public void ausgabe() {
+        System.out.print(zahl[0]);
+        for (int i=1; i<zahl.length; i++) {
+            System.out.print(", ");
+            System.out.print(zahl[i]);
+        }
+        System.out.println();
+    }
+    
+    public void tausche(int a, int b) {
+        int temp = zahl[a];
+        zahl[a] = zahl[b];
+        zahl[b] = temp;
+    }
+    
+    public void sortieren() {
+        for (int i=0; i<zahl.length-1; i++) {
+            for (int j=0; j<zahl.length-(i+1); j++) {
+                if (zahl[j] > zahl[j+1]) tausche(j, j+1);
+            }
+        }
     }
 }
