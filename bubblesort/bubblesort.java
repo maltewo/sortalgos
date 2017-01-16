@@ -10,7 +10,7 @@ public class bubblesort
     int zahl[] = {42, 56, 24, 1, 74, 7, 8, 27, 96, 12};
 
     
-    public bubblesort_class()
+    public bubblesort()
     {
         // initialise instance variables
         ausgabe();
