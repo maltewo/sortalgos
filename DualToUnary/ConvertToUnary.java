@@ -3,19 +3,19 @@ import java.io.*;
 
 
 class ConvertToUnary	{
-	
+
 	static String binaerzahl;
 	public static int dezimal;
 
-//Eingabemethode	
+//Eingabemethode
 	public static void eingabe() throws IOException	{
-    InputStreamReader isr = new InputStreamReader(System.in);
-    BufferedReader br = new BufferedReader(isr);
-    System.out.print("Bitte Binärzahl eingeben: ");
-    binaerzahl = br.readLine();
-	dezimal = Integer.parseInt(binaerzahl, 2);  //Hier wird aus dem Binärstring ein Dezimal-Integer erzeugt
-    }    
-	
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Bitte Binärzahl eingeben: ");
+	    binaerzahl = br.readLine();
+		dezimal = Integer.parseInt(binaerzahl, 2);  //Hier wird aus dem Binärstring ein Dezimal-Integer erzeugt
+    }
+
 
 //Die Methode "Umrechnung" rechnet den Dezimal-Intger in eine unäre Zahl um und gibt das Ergebnis aus
 	public void umrechnung()	{
@@ -24,5 +24,9 @@ class ConvertToUnary	{
 			System.out.print(1);
 		}
 	}
-}
 
+	//Rechnet die übergebene Binärzahl direkt in eine Unäre Zahl um und gibt diese aus
+	public void umrechnung(String bi){
+
+	}
+}
