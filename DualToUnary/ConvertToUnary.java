@@ -2,20 +2,20 @@
 import java.io.*;
 
 
-class ConvertToUnary	{
-	
-	static String binaerzahl;
+class ConvertToUnary{
+
+	public static String binaerzahl;
 	public static int dezimal;
 
-//Eingabemethode	
+//Eingabemethode
 	public static void eingabe() throws IOException	{
-    InputStreamReader isr = new InputStreamReader(System.in);
-    BufferedReader br = new BufferedReader(isr);
-    System.out.print("Bitte Binärzahl eingeben: ");
-    binaerzahl = br.readLine();
-	dezimal = Integer.parseInt(binaerzahl, 2);  //Hier wird aus dem Binärstring ein Dezimal-Integer erzeugt
-    }    
-	
+	    InputStreamReader isr = new InputStreamReader(System.in);
+	    BufferedReader br = new BufferedReader(isr);
+	    System.out.print("Bitte Binärzahl eingeben: ");
+	    binaerzahl = br.readLine();
+		dezimal = Integer.parseInt(binaerzahl, 2);  //Hier wird aus dem Binärstring ein Dezimal-Integer erzeugt
+    }
+
 
 //Die Methode "Umrechnung" rechnet den Dezimal-Intger in eine unäre Zahl um und gibt das Ergebnis aus
 	public void umrechnung()	{
@@ -24,5 +24,22 @@ class ConvertToUnary	{
 			System.out.print(1);
 		}
 	}
-}
 
+	//Rechnet die Binärzahl direkt in eine Unäre Zahl um und gibt diese aus (Malte M)
+	public static void umrechnung2(){
+		String unar = "";
+		int l = binaerzahl.length();
+		for(int i = l - 1; i >= 0; i--){
+			if(binaerzahl.charAt(i) == '1'){
+				for(int j = 0; j < Math.pow(2, l - i - 1); j++){
+					unar += '1';
+				}
+			}
+		}
+		System.out.println();
+		System.out.println("Die direkte Umrechnung ergibt:");
+		System.out.println(unar);
+	}
+
+
+}
