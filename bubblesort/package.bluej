@@ -1,3 +1,25 @@
 #BlueJ package file
-#Mon Jan 16 10:12:25 CET 2017
+objectbench.height=76
+objectbench.width=1416
+package.editor.height=722
+package.editor.width=1293
+package.editor.x=0
+package.editor.y=0
+package.numDependencies=0
+package.numTargets=1
+package.showExtends=true
+package.showUses=true
 project.charset=UTF-8
+target1.editor.height=881
+target1.editor.width=720
+target1.editor.x=720
+target1.editor.y=0
+target1.height=50
+target1.name=bubblesort_class
+target1.naviview.expanded=true
+target1.showInterface=false
+target1.type=ClassTarget
+target1.typeParameters=
+target1.width=140
+target1.x=70
+target1.y=10
