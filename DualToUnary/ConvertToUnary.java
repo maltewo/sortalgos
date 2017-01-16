@@ -29,10 +29,9 @@ class ConvertToUnary{
 	public static void umrechnung2(){
 		String unar = "";
 		int l = binaerzahl.length();
-		for(int i = 0; i < l; i++){
+		for(int i = l - 1; i >= 0; i--){
 			if(binaerzahl.charAt(i) == '1'){
-				for(int j = 0; j < Math.pow(2, i); j++){
-
+				for(int j = 0; j < Math.pow(2, l - i - 1); j++){
 					unar += '1';
 				}
 			}
