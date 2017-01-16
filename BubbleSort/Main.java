@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.Scanner;
 
 class Main	{
 	
@@ -10,7 +9,9 @@ class Main	{
 		
 		bubblesort.sortieren(); 
 		bubblesort.tausche(BubbleSort.a, BubbleSort.b);
-		//bubblesort.ausgabe();
+		//bubblesort.ausgabe();  
+		
+		
 	
 	}
 	
