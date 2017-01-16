@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class bubblesort_class
+public class bubblesort
 {
     int zahl[] = {42, 56, 24, 1, 74, 7, 8, 27, 96, 12};
 
