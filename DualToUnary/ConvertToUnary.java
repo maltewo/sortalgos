@@ -2,9 +2,9 @@
 import java.io.*;
 
 
-class ConvertToUnary	{
+class ConvertToUnary{
 
-	static String binaerzahl;
+	public static String binaerzahl;
 	public static int dezimal;
 
 //Eingabemethode
@@ -25,8 +25,23 @@ class ConvertToUnary	{
 		}
 	}
 
-	//Rechnet die übergebene Binärzahl direkt in eine Unäre Zahl um und gibt diese aus
-	public void umrechnung(String bi){
+	//Rechnet die Binärzahl direkt in eine Unäre Zahl um und gibt diese aus (Malte M)
+	public static void umrechnung2(){
+		String unar = "";
+		int l = binaerzahl.length();
+		for(int i = l - 1; i >= 0; i--){
+			if(binaerzahl.charAt(i) == 1){
+				for(int j = 0; j < Math.pow(2, i); i++){
+					unar += '1';
+				}
+			}
+		}
+		System.out.println(unar);
+	}
+
+	public static void main(String[] args) throws IOException{
+		binaerzahl = "1010";
+		umrechnung2();
 
 	}
 }
