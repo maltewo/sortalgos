@@ -1,14 +1,13 @@
 //Dieses Programm rechnet eine gegebene binäre Zahl ins unäre Zahlensystem um.
 import java.io.*;
-import java.util.Scanner;
 
 
 class ConvertToUnary	{
 	
-	static String binaerzahl;// = ("110");
+	static String binaerzahl;
 	public static int dezimal;
-	//int dezimal;
-	
+
+//Eingabemethode	
 	public static void eingabe() throws IOException	{
     InputStreamReader isr = new InputStreamReader(System.in);
     BufferedReader br = new BufferedReader(isr);
@@ -18,14 +17,12 @@ class ConvertToUnary	{
     }    
 	
 
-//Die Methode "Umrechnung" rechnet den Dezimal-Intger in eine unäre Zahl um
+//Die Methode "Umrechnung" rechnet den Dezimal-Intger in eine unäre Zahl um und gibt das Ergebnis aus
 	public void umrechnung()	{
 		System.out.println("Die binäre Zahl " + binaerzahl + " lautet im Unärsystem: ");
 		for (int i=1; i<=dezimal; i++)	{
 			System.out.print(1);
 		}
 	}
-	
-	
 }
 
