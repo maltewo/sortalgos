@@ -29,19 +29,18 @@ class ConvertToUnary{
 	public static void umrechnung2(){
 		String unar = "";
 		int l = binaerzahl.length();
-		for(int i = l - 1; i >= 0; i--){
-			if(binaerzahl.charAt(i) == 1){
-				for(int j = 0; j < Math.pow(2, i); i++){
+		for(int i = 0; i < l; i++){
+			if(binaerzahl.charAt(i) == '1'){
+				for(int j = 0; j < Math.pow(2, i); j++){
+
 					unar += '1';
 				}
 			}
 		}
+		System.out.println();
+		System.out.println("Die direkte Umrechnung ergibt:");
 		System.out.println(unar);
 	}
 
-	public static void main(String[] args) throws IOException{
-		binaerzahl = "1010";
-		umrechnung2();
 
-	}
 }
