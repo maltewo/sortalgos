@@ -1,6 +1,16 @@
-class Quicksort{
-	public static void main(String[] args){
+import java.util.Random;
 
+class Quicksort{
+
+
+	public static void main(String[] args){
+		int[] ar = new int[10];
+		randomize(ar);
+		printArray(ar);
+
+		sort(ar, 0, ar.length - 1);
+
+		printArray(ar);
 	}
 
 	//Die Sortierfunktion
@@ -17,12 +27,13 @@ class Quicksort{
 		int i = l - 1;
 		int j = r + 1;
 		while(true){
-			while(a[i] < p) i++;
-			while(a[j] > p) j--;
-			if(l < r){
+			do{ i++; } while(a[i] < p);
+
+			do{ j--; } while(a[j] > p);
+			if(i < j){
 				exchange(a, i, j);
 			} else {
-				return i;
+				return j;
 			}
 		}
 
@@ -33,5 +44,19 @@ class Quicksort{
 		int tmp = a[x];
 		a[x] = a[y];
 		a[y] = tmp;
+	}
+
+	public static void printArray(int[] arr){
+		for(int i: arr){
+			System.out.print(i + " ");
+		}
+		System.out.println();
+	}
+
+	public static void randomize(int[] a){
+		Random r = new Random();
+		for (int i = 0; i < a.length; i++) {
+			a[i] = r.nextInt(101);
+		}
 	}
 }
