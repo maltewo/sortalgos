@@ -14,7 +14,18 @@ class Quicksort{
 	//Teilt den übergebenen Bereich und gibt das Pivotelement zurück
 	public static int partition(int[] a, int l, int r){
 		int p = a[(l + r) / 2]; 							//Ermitteln des Pivotelements
-		
+		int i = l - 1;
+		int j = r + 1;
+		while(true){
+			while(a[i] < p) i++;
+			while(a[j] > p) j--;
+			if(l < r){
+				exchange(a, i, j);
+			} else {
+				return i;
+			}
+		}
+
 	}
 
 	//Die eigentliche Tauschfunktion
