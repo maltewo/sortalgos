@@ -31,7 +31,8 @@ class ConvertToUnary{
 		int l = binaerzahl.length();
 		for(int i = l - 1; i >= 0; i--){
 			if(binaerzahl.charAt(i) == '1'){
-				for(int j = 0; j < Math.pow(2, l - i - 1); j++){
+				int pot = Math.pow(2, l - i - 1);
+				for(int j = 0; j < pot; j++){
 					unar += '1';
 				}
 			}
